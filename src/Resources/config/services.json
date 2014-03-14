@@ -1,0 +1,18 @@
+{
+	"request" :
+	{
+	    "class" : "service\\request",
+	    "parameters" : [],
+	    "tags" : [
+	        {"name" : "kernel.event", "event" : "onReady", "method" : "onReady"}
+	    ]
+	},
+	"httpKernel" :
+	{
+		"class" : "service\\httpKernel",
+	    "parameters" : ["@logger", "@eventmanager", "@service_container"],
+		"tags" : [
+			{"name" : "kernel.event", "event" : "onRequest", "method" : "onRequest"}
+		]
+	}
+}
